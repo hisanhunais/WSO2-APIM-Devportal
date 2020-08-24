@@ -15,14 +15,8 @@ pipeline {
                 RETRY = '80'
             }
             steps {
-                echo 'Logging into $PROD_ENV'
-                sh ""
+                echo 'Logging into $PROD_ENV
                 ./apictl login production -u admin -p admin -k
-            }
-        }
-        stage('Compile Packages') {
-            steps {
-                sh 'mvn packages'
             }
         }
     }
