@@ -17,7 +17,7 @@ pipeline {
             steps {
                 echo 'Logging into $PROD_ENV'
                 sh ""
-                apictl login production -u admin -p admin -k
+                ./apictl login production -u admin -p admin -k
             }
         }
         stage('Compile Packages') {
