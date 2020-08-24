@@ -15,7 +15,7 @@ pipeline {
                 RETRY = '80'
             }
             steps {
-                echo 'Logging into $PROD_ENV
+                echo 'Logging into $PROD_ENV'
                 ./apictl login production -u admin -p admin -k
             }
         }
