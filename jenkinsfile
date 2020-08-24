@@ -22,7 +22,8 @@ pipeline {
         }
         stage('Compile Packages') {
             steps {
-                sh 'mvn packages'
+                def mvnHome = tool name: '', type: 'maven'
+                sh '${mvnHome}/bin/mvn packages'
             }
         }
 }
