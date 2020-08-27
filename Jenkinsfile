@@ -15,9 +15,18 @@ pipeline {
                 RETRY = '80'
             }
             steps {
-                echo 'Logging into $PROD_ENV'
                 sh './import_changes.sh'
             }
         }
     }
+    post {
+        cleanup {
+            deleteDir()
+            dir("${workspace}@tmp") {
+                deleteDir()
+            }
+            dir("${workspace}@script") {
+                deleteDir()
+            }
+        }
 }
