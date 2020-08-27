@@ -16,7 +16,6 @@ pipeline {
             }
             steps {
                 echo 'Logging into $PROD_ENV'
-                chmod -R 700 import_changes.sh
                 sh './import_changes.sh'
             }
         }
