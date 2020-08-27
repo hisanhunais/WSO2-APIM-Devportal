@@ -1,8 +1,5 @@
 pipeline {
     agent any
-    environment {
-        PROD_ENV = 'production'        
-    }
     stages {
         stage('Preparation') {
             steps{
@@ -11,9 +8,6 @@ pipeline {
             }
         }
         stage('Deploy to Production') {
-            environment{
-                RETRY = '80'
-            }
             steps {
                 sh './import_changes.sh'
             }
