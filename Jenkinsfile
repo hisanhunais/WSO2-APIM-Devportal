@@ -19,8 +19,5 @@ pipeline {
             dir("${workspace}@tmp") {
                 deleteDir()
             }
-            dir("${workspace}@script") {
-                deleteDir()
-            }
         }
 }
