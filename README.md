@@ -1,3 +1,3 @@
-# WSO2-APIM-Devportal
+# Deploying Public APIs to WSO2 APIM Devportal
 
 Sample cicd-apis import for WSO2 Devportal 
