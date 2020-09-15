@@ -4,7 +4,7 @@ pipeline {
         stage('Preparation') {
             steps{
                 git branch: "master",
-                url: 'https://github.com/HiranyaKavishani/openapi-directory.git'
+                url: 'https://github.com/msm1992/openapi-directory.git'
             }
         }
         stage('Deploy to Production') {
