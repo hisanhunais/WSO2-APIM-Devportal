@@ -5,7 +5,9 @@ cicd-public-apis import for WSO2 Devportal
 **Requirement**
 
 Install Jenkin
+
 pip install niet==2.2.0
+
 pip install json-query  
 
 1. Configure a Jenkin build for https://github.com/HiranyaKavishani/openapi-directory.git
