@@ -11,10 +11,10 @@ pip install json-query
 
 2. Configure a github webhook (Can use Ngrok to connect with localhost) 
 
-3. Execute "retrieveOASfiles_and_addGlobalScopes.sh" on the workspace project
+   optional: Execute "retrieveOASfiles_and_addGlobalScopes.sh" on the workspace project to create global scopes
 
-4. Execute "initialscript.sh" on the workspace project which will create API Projects from existing files and deploy them to developer portal
+3. Execute "initial_script_modified.sh" on the workspace project which will create API Projects from existing files and deploy them to developer portal
 
-5. Store the last commit Id in to a file > lastSuccesfulBuildCommit.txt
+4. Store the last commit Id in to a file > lastSuccesfulBuildCommit.txt and place it in to workspace project
 
-6. Configure https://github.com/HiranyaKavishani/WSO2-APIM-Devportal/blob/master/Jenkinsfile pipeline and execute import-new-changes.sh to add new changes
+5. Configure https://github.com/HiranyaKavishani/WSO2-APIM-Devportal/blob/master/Jenkinsfile pipeline and execute import-new-changes.sh to add new changes
