@@ -9,7 +9,7 @@ pipeline {
         }
         stage('Deploy to Production') {
             steps{
-                sh './import-new-changes.sh'
+                sh './import_changes_modified.sh'
             }
         }
     }
