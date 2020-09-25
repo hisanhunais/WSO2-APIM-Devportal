@@ -19,7 +19,7 @@ printf "%s\n" "${array[@]}" > openAPIFileList.txt
     echo "$securitySchemes"
 
     if [[ $securitySchemes != "Element not found"* ]]; then
-        scopes=$(echo null | jq "$securitySchemes | ..|.scopes?|select(.)" | jq 'keys[] as $k | "\($k):delemeter:\(.[$k])"' | jq -r | sort -u)
+        scopes=$(echo null | jq "..|.scopes?|select(.)" | jq 'keys[] as $k | "\($k):delemeter:\(.[$k])"' -r | sort -u)
 
         if [ ! -z "$scopes" ]; then
             echo "$scopes"
